@@ -8,10 +8,13 @@ app.config['SQLALCHEMY_ECHO'] = True
 db = SQLAlchemy(app)
 
 class Blog(db.Model):
-    id = db.column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(50))
     body = db.Column(db.String(1000))
 
-    def __init__(self, title, blogpost)
-    self.title = title
-    self.body = body
+    def __init__(self, title, body):
+        self.title = title
+        self.body = body
+
+if __name__ == '__main__':
+    app.run()

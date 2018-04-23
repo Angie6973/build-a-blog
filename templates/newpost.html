@@ -1,24 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
- 
+<style type="text/css">
+    .titlearea{border: 2px solid rgb(120, 120, 243);width: 250px}</style>
+
+
+    &nbsp;&nbsp;
     <a href="/blog">Main Blog Page</a>
+    &nbsp;&nbsp;
     <a href="/newpost">Add a Blog Entry</a>
  
     <br></br>
-   <h1>Add a Blog Entry</h1>
+   <h1><center>Add a Blog Entry</center></h1>
    <br></br> 
 
-    <form>
-        <label>
+    <form method='post' action="/blog?id=id">
+        <label>&nbsp;&nbsp;&nbsp;&nbsp;
             Title for new blog:
-        <input type="text" name='title'/>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<input class=titlearea type="text" name='title'/></div>
+        <br></br>
         
-        
-        <label>
+        <label>&nbsp;&nbsp;&nbsp;&nbsp;
             Your new blog:
-        <input type="text" name='body'/>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;
+                
+                 
+            <textarea rows="5" cols="30" name='body' type="text"></textarea></div>
         </label>
-        <input type="submit">Add Entry</input>
+        <br></br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Add Entry"/>
     </label>
         
     </form>
