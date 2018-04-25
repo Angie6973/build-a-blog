@@ -1,13 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
  
-&nbsp;&nbsp;
-<a href="/blog">Main Blog Page</a>
-&nbsp;&nbsp;
-<a href="/newpost">Add a Blog Entry</a>
+
 
 <br></br>
 <h1><center>Build a Blog</center></h1>
 <br></br>
-    
+<h4></h4>
+
+    {% for entry in all_entries %}
+        
+            <nav><h2>
+                &nbsp;&nbsp;<a href="/blog?id={{ entry.id }}">{{ entry.title }}</a>
+            </h2>
+            <p>&nbsp;&nbsp;{{ entry.body }}</p></nav>
+            
+        
+    {% endfor %}
+
 {% endblock %}
+    
+ 

@@ -4,27 +4,23 @@
     .titlearea{border: 2px solid rgb(120, 120, 243);width: 250px}</style>
 
 
-    &nbsp;&nbsp;
-    <a href="/blog">Main Blog Page</a>
-    &nbsp;&nbsp;
-    <a href="/newpost">Add a Blog Entry</a>
- 
+    
     <br></br>
    <h1><center>Add a Blog Entry</center></h1>
    <br></br> 
 
-    <form method='post' action="/blog?id=id">
-        <label>&nbsp;&nbsp;&nbsp;&nbsp;
-            Title for new blog:
-        <div>&nbsp;&nbsp;&nbsp;&nbsp;<input class=titlearea type="text" name='title'/></div>
+    <form method='post' action="/newpost">
+        <label   for="title_area">
+            &nbsp;&nbsp;&nbsp;&nbsp;Title for new blog:</label>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;<input id="title_area" class="titlearea" type="text" name="title" value= "{{ blog_title }}" />
         <br></br>
         
-        <label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for= "text_area">&nbsp;&nbsp;&nbsp;&nbsp;
             Your new blog:
         <div>&nbsp;&nbsp;&nbsp;&nbsp;
                 
                  
-            <textarea rows="5" cols="30" name='body' type="text"></textarea></div>
+            <textarea rows="5" cols="30" name='body' type="text" value="{{blog_body}}"></textarea></div>
         </label>
         <br></br>
         &nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Add Entry"/>
