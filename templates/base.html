@@ -3,20 +3,28 @@
 <head>
     
     <title>Build a Blog</title>
-    <style type="text/css">
-        .error {
-            color: red;
-        }
-</style>
+     
+
  </head>
  
 <body>
     <main>
-        <nav>&nbsp;&nbsp;
+        &nbsp;&nbsp;
         <a href="/blog">Main Blog Page</a>
         &nbsp;&nbsp;
         <a href="/newpost">Add a Blog Entry</a>
-        </nav>
+
+        
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class = flashes>
+            {% for message in messages %}
+        <li style= "color: red;">{{message}}</li>
+         
+        {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
         
   
        {% block content %}

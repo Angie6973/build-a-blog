@@ -10,12 +10,11 @@
 
     {% for entry in all_entries %}
         
-            <nav><h2>
+            <h2>
                 &nbsp;&nbsp;<a href="/blog?id={{ entry.id }}">{{ entry.title }}</a>
             </h2>
-            <p>&nbsp;&nbsp;{{ entry.body }}</p></nav>
-            
-        
+            <p>&nbsp;&nbsp;{{ entry.body }}</p>
+            <hr style="height:2px;border-width:0;color:rgb(196, 196, 196);background-color:rgb(196, 195, 195)">
     {% endfor %}
 
 {% endblock %}
